@@ -41,11 +41,12 @@
 }
 
 .Exhibit {
-  width: 50vw;
-  background: #eee;
+  max-height: 50vh;
+  background: #ddd;
   margin: 2vmin;
   font-family: Arial;
   display: inline-block;
+  overflow: hidden;
 }
 
 .Exhibit-heading {
@@ -67,9 +68,18 @@
 }
 
 .Exhibit-children > * {
-  width: max(10vw, 8em);
+  width: max(15vw, 8em);
   height: 100%;
   vertical-align: center;
   padding: calc(0.5em + 0.5vw) 0.5vw;
   background: white;
+}
+
+.IPDisplay {
+  font-family: monospace;
+  font-size: calc(0.5em + 1vmin);
+  background: #222;
+  color: white;
+  display: inline-block;
+  margin: auto;
 }

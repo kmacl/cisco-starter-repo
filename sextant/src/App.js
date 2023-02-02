@@ -1,4 +1,25 @@
 import './App.css';
+import React from 'react';
+
+class IPDisplay extends React.Component {
+  state = {ip: "Loading..."}
+  render() {
+    return (
+      <div className="IPDisplay">
+        IPV{this.props.v6 ? "6" : "4"}: {this.state.ip}<br/>
+      </div>
+    );
+  }
+  componentDidMount() {
+    var ip_addr = this.state.ip;
+    var url = "https://api" + (this.props.v6 ? "64" : "") + ".ipify.org";
+    fetch(url)
+      .then((resp) => resp.text())
+      .then((text) => {
+        this.setState({ip: text})
+      });
+  }
+}
 
 function Exhibit(props) {
   return (
@@ -20,11 +41,8 @@ function App() {
         Sextant
       </div>
       <Exhibit heading="Heading here...">
-        <div>Hi, there.</div>
-        <p>How are you?</p>
-        <h2>Yet another test</h2>
-        <div>Okay, this is the last element.</div>
-        <h2>Just kidding!</h2>
+        <IPDisplay/>
+        <IPDisplay v6="true"/>
       </Exhibit>
     </div>
   );
