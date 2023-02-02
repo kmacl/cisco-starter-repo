@@ -14,13 +14,16 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #256;
+  text-transform: uppercase;
+  letter-spacing: -0.125em;
+  font-family: Arial bold;
+  min-height: 8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(2em + 2vmin);
   color: white;
 }
 
@@ -35,4 +38,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Exhibit {
+  width: 50vw;
+  background: #eee;
+  margin: 2vmin;
+  font-family: Arial;
+  display: inline-block;
+}
+
+.Exhibit-heading {
+  font-size: calc(1em + 1.5vmin);
+  font-family: Arial bold;
+  padding: 1vh;
+  background: #48a;
+  color: white;
+}
+
+.Exhibit-children {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: calc(0.5em + 0.5vw);
+  align-items: center;
+  margin: 0.5em;
+}
+
+.Exhibit-children > * {
+  width: max(10vw, 8em);
+  height: 100%;
+  vertical-align: center;
+  padding: calc(0.5em + 0.5vw) 0.5vw;
+  background: white;
 }

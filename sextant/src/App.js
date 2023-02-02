@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+
+function Exhibit(props) {
+  return (
+    <div className="Exhibit">
+      <div className="Exhibit-heading">
+        {props.heading}
+      </div>
+      <div className="Exhibit-children">
+        {props.children}
+      </div>
+    </div>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+        Sextant
+      </div>
+      <Exhibit heading="Heading here...">
+        <div>Hi, there.</div>
+        <p>How are you?</p>
+        <h2>Yet another test</h2>
+        <div>Okay, this is the last element.</div>
+        <h2>Just kidding!</h2>
+      </Exhibit>
     </div>
   );
 }
