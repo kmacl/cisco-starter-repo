@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #256;
+  background-image: linear-gradient(to right, #000, #256, #000);
   text-transform: uppercase;
   letter-spacing: -0.125em;
   font-family: Arial bold;
@@ -50,7 +50,7 @@
 }
 
 .Exhibit-heading {
-  font-size: calc(1em + 1.5vmin);
+  font-size: calc(0.75em + 1.5vmin);
   font-family: Arial bold;
   padding: 1vh;
   background: #48a;
@@ -75,7 +75,7 @@
   background: white;
 }
 
-.IPDisplay {
+.Data-point {
   font-family: monospace;
   font-size: calc(0.5em + 1vmin);
   background: #222;
